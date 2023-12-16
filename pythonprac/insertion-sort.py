@@ -1,4 +1,5 @@
-
+import random
+import time
 def insertionSort (unsortlist):
     if len(unsortlist)==1:
         return unsortlist
@@ -23,3 +24,12 @@ def insert (n, sortedlist):
         sortedlist.append(n)
 
     return sortedlist
+
+
+randomlist=[]
+for x in range(1000):
+    randomlist.append(random.randint(0,10000))
+
+t1=time.time()
+insertionSort(randomlist)
+print(time.time()-t1) 

@@ -1,4 +1,7 @@
 import math
+import time
+import random
+import sys
 
 def mergesort(lst):
     middle=math.floor((len(lst)+1)/2)
@@ -33,3 +36,13 @@ def merge(sortedlist1, sortedlist2):
     else:
         return [s1]+[s2]+merge(sortedlist1[1:len(sortedlist1)],sortedlist2[1:len(sortedlist2)])
 
+
+
+randomlist=[]
+for x in range(1000):
+    randomlist.append(random.randint(0,10000))
+
+t1=time.time()
+print(mergesort(randomlist))
+print(time.time()-t1) 
+print(sys.getrecursionlimit())
