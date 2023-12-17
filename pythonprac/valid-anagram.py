@@ -3,7 +3,7 @@
 #wrong was thinking palindrome.
 #use dictionary to count the number of occurrences?
 #maybe slow?
-#good solve.
+#good solve. nice.
 
 def isAnagram(s,t):
     s=list(s)
