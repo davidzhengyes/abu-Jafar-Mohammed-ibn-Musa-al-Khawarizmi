@@ -1,3 +1,8 @@
+#https://leetcode.com/problems/valid-palindrome/submissions/
+#good idea just went through the list too many times turning it into new lists.
+#neetcode soln was as slow as mine. maybe list inefficient?
+#checking top leetcode solns now.
+
 import numbers
 
 
