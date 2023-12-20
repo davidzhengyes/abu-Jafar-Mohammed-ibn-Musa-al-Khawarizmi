@@ -4,6 +4,7 @@
 #stop whenever greater than the sum
 #shmove the pointers.
 #remember there is a guaranteed solution.
+#decent solution just use while loop next time instead of foor loop with if.
 
 #can have a continueFrom pointer.
 #just see how slow it is if we do o(n^2)
