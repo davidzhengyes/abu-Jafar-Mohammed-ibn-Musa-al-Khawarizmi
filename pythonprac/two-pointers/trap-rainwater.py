@@ -10,33 +10,50 @@
 
 #should not be using for loop
 #UNLESS WE USE SOMETHING TO CHECK
-def trap(height):
-    lp=0
-    rp=0
-    maxvol=0
+# def trap(height):
+#     lp=0
+#     rp=0
+#     maxvol=0
 
-    pauseloop=0
-    for x in range(len(height)-1):
+#     pauseloop=0
+#     for x in range(len(height)-1):
     
 
-        if height[x]>height[x+1] and x>=pauseloop:
-            lp=x
-            rp=x+1
+#         if height[x]>height[x+1] and x>=pauseloop:
+#             lp=x
+#             rp=x+1
             
-            while  rp<len(height)-1 and height[rp]<=height[rp-1]:
-                #finding next index that is higher than the middle of two pointers
-                rp+=1
+#             while  rp<len(height)-1 and height[rp]<=height[rp-1]:
+#                 #finding next index that is higher than the middle of two pointers
+#                 rp+=1
             
-            #calculate how much between
-            minisum=0
-            print(lp,rp)
-            mintowers=min(height[lp],height[rp])
-            for x in range(lp+1,rp):
-                if height[x]<mintowers:
-                    minisum+=mintowers-height[x]
-            maxvol+=minisum
+#             #calculate how much between
+#             minisum=0
+#             print(lp,rp)
+#             mintowers=min(height[lp],height[rp])
+#             for x in range(lp+1,rp):
+#                 if height[x]<mintowers:
+#                     minisum+=mintowers-height[x]
+#             maxvol+=minisum
 
-            pauseloop=rp
-    return maxvol
+#             pauseloop=rp
+#     return maxvol
             
+#neetcode's solution stinky algorithm to find height.
+def trap(height):
+    l,r=0,len(height)-1
+    leftMax,rightMax,=height[l],height[r]
+    res=0
 
+    while l<r:
+        if leftMax<rightMax:
+            l+=1
+            leftMax=max(leftMax,height[l])
+
+            res += leftMax-height[l]
+        else:
+            r-=1
+            rightMax=max(rightMax,height[r])
+
+            res += rightMax-height[r]
+    return res
