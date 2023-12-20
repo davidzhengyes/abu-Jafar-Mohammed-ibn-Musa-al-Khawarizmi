@@ -15,6 +15,7 @@ def maxArea(height):
         lp=0
         rp=lp+gap
         currmax=0
+        currmaxX=0
         while rp<n:
             minheight=min(height[lp],height[rp])
             vol=gap*minheight
