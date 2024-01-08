@@ -1,3 +1,2 @@
 # abu-Jafar-Mohammed-ibn-Musa-al-Khawarizmi
-practicing some stuff  
-algorithm !?!?!
+(namesake of the term "algorithm"?) Repository of my practice of Data Structures and ALgorithms
